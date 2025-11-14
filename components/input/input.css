@@ -1,0 +1,39 @@
+
+
+
+
+.creditials{
+    width: 100%;
+    height: auto;
+   }
+
+label{
+    color: var(--text);
+    font-weight: 500;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+.creditials__fields{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+     border: 1px solid var(--Gray);
+    border-radius: 8px;
+    padding: 10px 12px 10px 15px;
+    margin-top: 7px;
+}
+
+input{
+    border: none;
+    background-color: transparent;
+}
+
+input:focus{
+    outline: none;
+    border: none;    
+    box-shadow: none; 
+}
