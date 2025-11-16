@@ -9,7 +9,8 @@
 
 label{
     color: var(--text);
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 img{
@@ -17,19 +18,20 @@ img{
     height: 20px;
 }
 
-.creditials__fields{
+.input__fields{
     display: flex;
     gap: 4px;
     align-items: center;
      border: 1px solid var(--Gray);
     border-radius: 8px;
-    padding: 10px 12px 10px 15px;
-    margin-top: 7px;
+    padding: 8px;
+    /* margin-top: 7px; */
 }
 
 input{
     border: none;
     background-color: transparent;
+    font-size: 16px;
 }
 
 input:focus{

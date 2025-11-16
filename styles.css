@@ -1,7 +1,14 @@
-:root{
---Himawari-Yellow : #FDC700;
---YInMn-Blue: #2957FB;
---White: #FFFFFF;
---Sambucus: #101828;
---Lunar-Rays: #CACDD2;
+
+
+
+
+main{
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }

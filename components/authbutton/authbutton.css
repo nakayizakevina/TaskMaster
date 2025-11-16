@@ -1,0 +1,35 @@
+
+
+
+
+.authbuttons{
+    display: flex;
+    gap: 4px;
+}
+
+
+.authbutton{
+    width: 50%;
+    padding: 10px 0;
+    border: none;
+    color:black;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor:pointer;
+    background-color: transparent ;
+
+}
+
+.authbutton--helpbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--Gray);
+}
+
+.authbutton--loginbtn{
+    background-color: var(--Yellow);
+}
+
+
