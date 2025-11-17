@@ -1,21 +1,23 @@
-
-
-
-
 <link rel="stylesheet" href="../../assets/css/gobal.css">
 <link rel="stylesheet" href="./card.css">
 
 <section class="card">
     <div class="card__uppersection">
-        <div data-import="../../components/logo/logo.html"></div>
-        <h1>Welcome Back!</h1>
-        <p>Enter your details to access your account</p>
+        <div class="logo-icons">
+           <img class="logo" src="../../assets/images/login.svg" alt="llogo">
+           <img class="send"  src="../../assets/images/send.svg" alt="">
+        </div>
+        
+        <h1 id="weclomemessage">Welcome Back!</h1>
+        <p id="welcomeremark">Enter your details to access your account</p>
 
     </div>
-    <form action="">
+    <form action="form" id="userform">
         <div data-import="../../components/actionbutton/actionbutton.html"></div>
         <div data-import="../../components/input/input.html"></div>
         <div data-import="../../components/authbutton/authbutton.html"></div>
         <div data-import="../../components/footer/footer.html"></div>
     </form>
 </section>
+
+<script src="../../assets/js/main.js"></script>

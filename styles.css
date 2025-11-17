@@ -4,7 +4,11 @@
 
 main{
     font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
+    background-image: url(/assets/images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* background-color: #f5f7fa; */
     display: flex;
     flex-direction: column;
     justify-content: center;
