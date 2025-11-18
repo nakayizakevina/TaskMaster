@@ -3,14 +3,14 @@
     background-color: var(--light-Gray);
     display:flex;
     gap: 8px;
-    padding: 5px;
-    border-radius: 12px;
+    padding: 6px;
+    border-radius: 6px;
 }
 
 
 .actionbutton{  
     width: 50%;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     border: none;
     color:black;
     border-radius: 6px;

@@ -95,28 +95,35 @@ loadComponents(document);
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    const loginBtn = document.getElementById("login");
-    const signupBtn = document.getElementById("signup");
-    const fullName = document.getElementById("fullname");
+//     const loginBtn = document.getElementById("login");
+//     const signupBtn = document.getElementById("signup");
+//     const fullName = document.getElementById("fullname");
+//     const title = document.getElementById("weclomemessage");
+//     const remark = document.getElementById("welcomeremark");
+   
+//     fullName.style.display = "none";
 
-    
-    fullName.style.display = "none";
+//     loginBtn.addEventListener("click", () => {
+//         fullName.style.display = "none";
+//         loginBtn.classList.add("active");
+//         signupBtn.classList.remove("active");
 
-    loginBtn.addEventListener("click", () => {
-        fullName.style.display = "none";
-        loginBtn.classList.add("active");
-        signupBtn.classList.remove("active");
-    });
+//         title.textContent = "Welcome Back!";
+//         remark.textContent = "Enter your details to access your account";
+//     });
 
-    signupBtn.addEventListener("click", () => {
-        fullName.style.display = "block";
-        signupBtn.classList.add("active");
-        loginBtn.classList.remove("active");
-    });
+//     signupBtn.addEventListener("click", () => {
+//         fullName.style.display = "block";
+//         signupBtn.classList.add("active");
+//         loginBtn.classList.remove("active");
 
-});
+//         title.textContent = "Join TaskMaster";
+//         remark.textContent = "Create an account to boost your productivity";
+//     });
+
+// });
 
 
 
