@@ -55,7 +55,7 @@ h1{
 }
 
 p{
-    color: var(--Gray);
+    color: var(--gray);
     margin-top: 5px;
     margin-bottom: 20px;
 }

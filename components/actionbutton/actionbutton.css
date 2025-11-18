@@ -1,6 +1,6 @@
 .buttons{
     width: 98%;
-    background-color: var(--light-Gray);
+    background-color: var(--lightgray);
     display:flex;
     gap: 8px;
     padding: 6px;
