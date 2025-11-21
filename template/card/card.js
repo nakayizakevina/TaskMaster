@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
      const title = document.getElementById("weclomemessage"); 
      const remark = document.getElementById("welcomeremark");
      
-    //  if (fullName) fullName.style.display = "none"; 
-     
      loginBtn.addEventListener("click", (e) => {
         e.preventDefault();
          fullName.style.display = "none"; 

@@ -1,8 +1,5 @@
-const componentElements = document.querySelectorAll("[data-import]");
-
-function loadComponents(domElement) {
-    const elementsArray = domElement.querySelectorAll("[data-import]");
-    for (let element of elementsArray) {
+function renderComponents(elements){
+  for (let element of elements) {
         const dataImport = element.getAttribute("data-import");
         fetch(dataImport)
             .then((res) => {
@@ -11,31 +8,28 @@ function loadComponents(domElement) {
             })
             .then((component) => {
                 element.innerHTML = component;
-                loadComponentStylesheets(element, dataImport);  // Pass component path
+                loadComponentStylesheets(element, dataImport); 
                 loadComponentScripts(element);
-                loadComponents(element);
+                const subComponents = element.querySelectorAll("[data-import]");
+                renderComponents(subComponents);
             })
             .catch(() => {
                 element.innerHTML = "<h4>Component not found</h4>";
             });
     }
-}
+} 
 
-// Load stylesheets from imported component into <head>
+const componentElements = document.querySelectorAll("[data-import]");
+renderComponents(componentElements)
+
 function loadComponentStylesheets(element, componentPath) {
     const links = element.querySelectorAll('link[rel="stylesheet"]');
     const head = document.head;
-    
-    // Get the directory of the component for resolving relative paths
     const componentDir = componentPath.substring(0, componentPath.lastIndexOf('/') + 1);
     
     for (let link of links) {
         const href = link.getAttribute('href');
-        
-        // Resolve relative path based on component location
         const resolvedHref = resolveRelativePath(componentDir, href);
-        
-        // Check if this stylesheet is already in the head to avoid duplicates
         const existingLink = head.querySelector(`link[href="${resolvedHref}"]`);
         
         if (!existingLink) {
@@ -45,28 +39,24 @@ function loadComponentStylesheets(element, componentPath) {
             head.appendChild(newLink);
         }
         
-        // Remove the link from the component body since it's now in head
+
         link.remove();
     }
 }
 
-// Helper function to resolve relative paths
 function resolveRelativePath(basePath, relativePath) {
-    // If the path is already absolute (starts with http:// or https:// or /), return as is
     if (relativePath.startsWith('http://') || relativePath.startsWith('https://') || relativePath.startsWith('/')) {
         return relativePath;
     }
     
-    // Combine base path with relative path
     const combinedPath = basePath + relativePath;
     
-    // Normalize the path (resolve ../ and ./)
     const parts = combinedPath.split('/');
     const normalized = [];
     
     for (let part of parts) {
         if (part === '..') {
-            normalized.pop(); // Go up one directory
+            normalized.pop();
         } else if (part !== '.' && part !== '') {
             normalized.push(part);
         }
@@ -75,88 +65,21 @@ function resolveRelativePath(basePath, relativePath) {
     return normalized.join('/');
 }
 
-// Load scripts inside the imported component
 function loadComponentScripts(element) {
     const scripts = element.querySelectorAll("script");
     for (let script of scripts) {
         const newScript = document.createElement("script");
         if (script.src) {
             newScript.src = script.src;
-        } else {
+        } if(script.textContent){
             newScript.textContent = script.textContent;
         }
-        script.remove();
-        document.body.appendChild(newScript);
+        
+        script.remove()
+
+        element.appendChild(newScript)
     }
 }
-
-// First load components in the document
-loadComponents(document);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
