@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/css/gobal.css">
     <link rel="stylesheet" href="/assets/css/dashboard.css">
 </head>
 <body>
     <section>
         <div data-import="/components/sidebar/sidebar.html" class="right-section"></div>
-        <main class="left-section"></main>
+        <main class="left-section">
+            <div data-import="/components/status/status.html"></div>
+        </main>
     </section>
     <script src="/assets/js/main.js"></script>
 </body>
