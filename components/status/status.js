@@ -1,10 +1,6 @@
- 
+ const card = document.querySelector(".card")
 
-  const card = document.querySelector(".card")
-
- 
-
-  const carddetail = (options) =>{
+ const carddetail = (options) =>{
     const template = document.createElement("template")
     template.innerHTML = `
     <div class="contianer">
@@ -14,9 +10,9 @@
      <img src= "${options.icons}">
     </div>
   </div>
-  <div>
-    <p>${options.number}</p>
-    <p>${options.text}</p>
+  <div class="amount">
+    <h3 class="value">${options.number}</h3>
+    <h5>${options.text}</h5>
   </div> 
 
   </div>
@@ -27,7 +23,7 @@
 
  
 
-  const getdeatils = carddetail ( {
+  const getdeatils = carddetail ({
     title: "active Tasks",
     icons: "/assets/images/checkedbox.svg",
     number: 2,

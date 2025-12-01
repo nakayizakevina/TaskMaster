@@ -15,7 +15,31 @@
     <section>
         <div data-import="/components/sidebar/sidebar.html" class="right-section"></div>
         <main class="left-section">
-            <div data-import="/components/status/status.html"></div>
+            <header class="greeting">
+                <h1>Good evening, Ketty!</h1>
+                <p>Here’s what’s happening with your productivity today</p>
+            </header>
+            <div class="cards" data-import="/components/status/status.html"></div>
+            <section class="overview">
+                <div class="recent__tasks overview__cards">
+                        <div class="recent-clock overview__title">
+                            <img src="/assets/images/clock.svg" width="20px" height="20px">
+                            <h4>Recent Tasks</h4>
+                        </div>
+                        <div class="recent-tasks2">
+                            <img src="/assets/images/checkedbox.svg" width="45px" height="45px">
+                            <p>No tasks yet</p>
+                        </div>
+                </div>
+                <div class="overview__cards">
+                    <div class="overview__title">
+                        <img src="/assets/images/trend-up.svg" alt="">
+                        <h4>Quick Actions</h4>
+                    </div>
+                    <div class="quick__actions" data-import="/components/quickaction/quickaction.html"></div>
+                </div>
+                
+            </section>
         </main>
     </section>
     <script src="/assets/js/main.js"></script>
