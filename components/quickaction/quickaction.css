@@ -1,16 +1,27 @@
 .task{
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
+  height: 40px;
+  /* padding: 10px; */
+  /* margin-bottom: 12px;  */
   display: flex;
   background: #eef3ff;
-  font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   text-align: left;
+  line-height: 0%;
 }
 
 .task:hover{
     background-color:var(--skyblue);
+}
+
+.action{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task__details{
+  line-height: 0%;
 }

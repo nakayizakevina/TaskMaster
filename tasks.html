@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="/assets/css/tasks.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <div data-import="/components/sidebar/sidebar.html"></div>
+    </section>
+    <div class="main">
+      <div class="card">
+        <div class="sidebar__menu sidebar__uppersection">
+          <div class="sidebar__logo">
+            <img class="logo" src="/assets/images/checkedbox.svg" alt="" />
+          </div>
+          <div class="sidebar__credetials aisection">
+            <p>Task Management</p>
+            <span>Manage and track your tasks</span>
+          </div>
+        </div>
+        <section class="last__section">
+          <div class="tabs">
+            <button class="tab-btn active">
+              <img src="./assets/images/clock.svg" alt="">
+              My Tasks
+            </button>
+            <button class="tab-btn" id="aisummary">
+              <img src="./assets/images/graph.svg" alt="">
+              AI Summary
+            </button>
+          </div>
+
+          <div id="summarisedoverview">
+            <div class="stats">
+              <div class="stats__overview">
+                <span class="active__task">0</span>
+                Active tasks
+              </div>
+              <div class="stats__overview">
+                <span class="completed">0</span>
+                Completed
+              </div>
+            </div>
+            <button class="add-task-btn" id="addtask">+ Add Task</button>
+          </div>
+
+          <div class="task-box" id="summary">
+            <img
+              id="stateicon"
+              src="/assets/images/emptycircle.svg"
+              alt="emptycircle"
+            />
+            <p id="statemessage">
+              No tasks yet<br />Click "Add Task" to create your first task
+            </p>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+  <section id="createtask" class="createtask hidden">
+  <div class="createtask__card">
+
+    <div class="createtask__header">
+      <div class="createtask__title">
+        <span class="ai__star">✦</span>
+        <h3>Create New Task</h3>
+      </div>
+       <img class="cancel" id="cancel" src="/assets/images/cancel.svg" alt="">
+    </div>
+
+    <p class="createtask-sub">Add a new task to your productivity list</p>
+
+    <label>Title</label>
+    <div class="input__ai">
+      <input type="text" id="taskTitle">
+      <span class="input__star">✦</span>
+    </div>
+
+    <label>Description</label>
+    <textarea id="taskDesc"></textarea>
+
+    <div class="createtask__row">
+      <div>
+        <label>Priority</label>
+        <select id="taskPriority">
+          <option>Low</option>
+          <option selected>Medium</option>
+          <option>High</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Due Date</label>
+        <input type="date" id="taskDate">
+      </div>
+    </div>
+
+    <div class="createtask__actions">
+      <button id="cancelTask">Cancel</button>
+      <button id="createTask">Create Task</button>
+    </div>
+
+  </div>
+  </section>
+    <script src="/assets/js/tasks.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

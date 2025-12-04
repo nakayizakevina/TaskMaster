@@ -6,8 +6,11 @@
     const template = document.createElement("template")
     template.innerHTML = `
     <div class="task">
-      <img src= "${options.icons}">
-      <div>
+     <div>
+       <img src= "${options.icons}">
+     </div>
+     
+      <div class="task__details">
         <p class="value">${options.title}</p>
         <span> ${options.text}</span>
       </div> 

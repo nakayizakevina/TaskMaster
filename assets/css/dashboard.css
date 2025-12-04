@@ -11,15 +11,22 @@ section{
 }
 
 .overview{
+    height: 50%;
      gap: 20px;
+}
+
+.greeting{
+    line-height: 0;
 }
 
 .overview__cards{
     width: 50%;
+    height: 90%;
     background-color:var(--white);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--gray);
 }
 
 .overview__title h4{
@@ -33,7 +40,7 @@ section{
 }
 
 .recent-tasks2{
-    height: 80%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,5 +56,94 @@ header p {
   color:var(gray);
   margin-top: 5px;
 }
+
+.quick-actions1 {
+     margin-top: 20px;
+     width: 50%;
+     height: 350px;
+     border-radius: 10px;
+     background-color: #FFFFFF;
+ }
+
+
+
+ .last-page {
+     display: flex;
+     gap: 30px;
+ }
+
+/* .quick-grid{
+    border: 2px solid green;
+} */
+
+ .grid1 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 35px;
+     width: 35px;
+     background-color: #DBEAFE;
+     border-radius: 10px;
+ }
+
+ .grid1 { 
+      position: absolute;
+     top: 16px;
+     left: 40px;
+ }
+
+ .grid2 {
+     position: absolute;
+     top: 16px;
+     left: 40px;
+     background-color: #CEFAFE;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 35px;
+     width: 35px;
+     border-radius: 10px;
+ }
+
+ .grid3 {
+     position: absolute;
+     top: 16px;
+     left: 40px;
+     background-color: #DBFCE7;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 35px;
+     width: 35px;
+
+     border-radius: 10px;
+ }
+
+ .quick-grid {
+     margin-top: 10px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     position: relative;
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+
+ .action-btn {
+     padding: 15px;
+     background:#F9FAFB ;
+     border-radius: 12px;
+     border: none;
+     cursor: pointer;
+     text-align: left;
+     padding-left: 70px;
+     line-height: 10px;
+ }
+
+ .action-btn:hover{
+    background-color:#06B6D4 ;
+    color: black;
+ }
+
 
 

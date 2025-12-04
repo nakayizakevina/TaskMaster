@@ -13,11 +13,12 @@
 }
 
 .contianer{
-    background:var(white);
+     background-color:var(--white);
      padding: 20px;
      border-radius: 12px;
      border: var(gray);
      line-height: 10px;
+    
   }
 
 .container:hover {
